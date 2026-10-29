@@ -76,7 +76,7 @@ export function About({
         </motion.div>
 
         <motion.div
-          className="relative mx-auto order-1 md:order-2"
+          className="relative mx-auto order-1 hidden md:block md:order-2"
           initial={{ opacity: 0, y: 20 }}
           animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
           transition={{ duration: 0.5, delay: 0.4 }}

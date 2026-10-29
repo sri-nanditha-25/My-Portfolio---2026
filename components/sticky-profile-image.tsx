@@ -122,7 +122,7 @@ export function StickyProfileImage({
         </div>
         <div
           aria-hidden="true"
-          className="pointer-events-none absolute inset-0 z-0 hidden translate-x-6 -translate-y-6 rounded-[42%_58%_63%_37%/38%_44%_56%_62%] bg-pink md:block"
+          className="pointer-events-none absolute inset-0 z-0 hidden translate-x-6 -translate-y-6 rounded-[42%_58%_63%_37%/38%_44%_56%_62%] bg-green md:block"
         />
       </motion.div>
     </motion.div>

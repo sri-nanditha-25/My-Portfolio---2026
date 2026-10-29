@@ -103,14 +103,17 @@ export function Hero({
 
                 <motion.div variants={itemVariants} className="pt-4 sm:pt-6">
                   <Button
-                    className="bg-green/95 text-navy hover:bg-green transition-all duration-200 hover:scale-105 rounded-xl shadow-[0_8px_20px_rgba(0,0,0,0.5),0_2px_6px_rgba(0,0,0,0.3),inset_0_-2px_4px_rgba(0,0,0,0.4),inset_0_2px_4px_rgba(255,255,255,0.15)]"
+                    className="relative rounded-xl bg-green/95 text-navy shadow-[0_8px_20px_rgba(0,0,0,0.5),0_2px_6px_rgba(0,0,0,0.3),inset_0_-2px_4px_rgba(0,0,0,0.4),inset_0_2px_4px_rgba(255,255,255,0.15)] transition-all duration-300 hover:-translate-y-1 hover:scale-105 hover:bg-green after:absolute after:inset-[-4px] after:-z-10 after:rounded-[0.9rem] after:border after:border-green/50 after:opacity-70 after:animate-pulse"
                     asChild
                   >
                     <a href="#about" className="group relative overflow-hidden">
-                      <span className="relative z-10 text-lg">
+                      <span className="relative z-10 flex items-center gap-2 text-lg">
                         Know about me
+                        <span aria-hidden="true" className="transition-transform duration-300 group-hover:translate-x-1">
+                          -&gt;
+                        </span>
                       </span>
-                      <span className="absolute inset-0 bg-green/20 translate-y-full group-hover:translate-y-0 transition-transform duration-300"></span>
+                      <span className="absolute inset-0 bg-green/20 translate-y-full transition-transform duration-300 group-hover:translate-y-0"></span>
                     </a>
                   </Button>
                 </motion.div>

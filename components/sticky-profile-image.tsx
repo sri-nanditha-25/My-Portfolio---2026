@@ -120,7 +120,17 @@ export function StickyProfileImage({
             quality={90}
           />
         </div>
-        <div className="pointer-events-none absolute inset-0 z-0 hidden translate-x-4 translate-y-4 rounded-[1.25rem] border-2 border-green/40 md:block" />
+        <svg
+          aria-hidden="true"
+          className="pointer-events-none absolute -inset-3 z-0 hidden h-[calc(100%+1.5rem)] w-[calc(100%+1.5rem)] fill-pink md:block"
+          viewBox="0 0 200 200"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M47.7,-44.9C56.6,-38.7,55.1,-19.4,55.8,0.7C56.5,20.7,59.3,41.4,50.4,48.6C41.4,55.7,20.7,49.2,3.9,45.3C-12.8,41.3,-25.7,39.9,-33.1,32.8C-40.5,25.7,-42.5,12.8,-41.8,0.6C-41.2,-11.6,-37.9,-23.1,-30.5,-29.3C-23.1,-35.5,-11.6,-36.3,3.9,-40.2C19.4,-44.1,38.7,-51.1,47.7,-44.9Z"
+            transform="translate(100 100)"
+          />
+        </svg>
       </motion.div>
     </motion.div>
   );

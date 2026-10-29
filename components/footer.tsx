@@ -58,7 +58,7 @@ export function Footer() {
             Framer Motion
           </Link>
         </p>
-        <p className="text-xs text-slate/70">© 2024 B Sri Nanditha. All Rights Reserved.</p>
+        <p className="text-xs text-slate/70">© 2026 B Sri Nanditha. All Rights Reserved.</p>
       </motion.div>
     </footer>
   )

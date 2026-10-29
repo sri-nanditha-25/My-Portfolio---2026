@@ -93,7 +93,7 @@ export function Header() {
               asChild
             >
               <a
-                href="https://drive.google.com/file/d/1o4t4E_BziVaXW6RcoeqLrhLgELbYI1d5/view"
+                href="https://drive.google.com/file/d/1Sb3SaXqnWq9C1vfHDh8301OhhkqEudUi/view?usp=sharing"
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -115,7 +115,7 @@ export function Header() {
             asChild
           >
             <a
-              href="https://drive.google.com/file/d/1aCaW97gsMkZsNIcFD659taRPCIfNZ1Ut/view"
+              href="https://drive.google.com/file/d/1Sb3SaXqnWq9C1vfHDh8301OhhkqEudUi/view?usp=sharing"
               target="_blank"
               rel="noopener noreferrer"
             >

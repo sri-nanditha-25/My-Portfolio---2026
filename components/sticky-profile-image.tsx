@@ -23,7 +23,18 @@ export function ProfileSlot({
       ref={slotRef}
       className={`${PROFILE_SLOT_CLASS} ${className}`}
       aria-hidden
-    />
+    >
+      <div className="relative h-full w-full overflow-hidden rounded-xl md:hidden">
+        <Image
+          src="/assets/about/profile-img.png"
+          alt=""
+          fill
+          sizes="192px"
+          className="object-cover"
+          quality={90}
+        />
+      </div>
+    </div>
   );
 }
 
@@ -81,7 +92,7 @@ export function StickyProfileImage({
 
   return (
     <motion.div
-      className={`pointer-events-none fixed left-0 top-0 z-30 will-change-transform`}
+      className="pointer-events-none fixed left-0 top-0 z-30 hidden will-change-transform md:block"
       style={{ x, y, width, height, opacity }}
     >
       <div className="group relative h-full w-full pointer-events-auto">

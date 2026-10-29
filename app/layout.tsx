@@ -15,8 +15,8 @@ const inter = Inter({
 
 export const metadata: Metadata = {
   title: {
-    default: "B Sri Nanditha - Frontend Developer",
-    template: "%s | B Sri Nanditha",
+    default: "Sri Nanditha Badireddi",
+    template: "%s | Sri Nanditha Badireddi",
   },
   description: "Product Engineer specializing in building exceptional web experiences. Currently focused on building User-Centric, Pixel Perfect, High Performant products at Zeko AI.",
   keywords: ["Frontend Developer", "Product Engineer", "React", "Next.js", "TypeScript", "Web Development", "Portfolio"],
@@ -28,13 +28,13 @@ export const metadata: Metadata = {
     type: "website",
     locale: "en_US",
     url: process.env.NEXT_PUBLIC_SITE_URL || "https://portfolio.example.com",
-    title: "B Sri Nanditha - Frontend Developer",
+    title: "Sri Nanditha Badireddi",
     description: "Product Engineer specializing in building exceptional web experiences. Currently focused on building User-Centric, Pixel Perfect, High Performant products at Zeko AI.",
     siteName: "B Sri Nanditha Portfolio",
   },
   twitter: {
     card: "summary_large_image",
-    title: "B Sri Nanditha - Frontend Developer",
+    title: "Sri Nanditha Badireddi",
     description: "Product Engineer specializing in building exceptional web experiences.",
     creator: "@yourtwitter",
   },

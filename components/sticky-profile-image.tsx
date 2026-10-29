@@ -108,7 +108,7 @@ export function StickyProfileImage({
         transition={{ delay: 0.45, duration: 0.5 }}
         className="group relative h-full w-full pointer-events-auto"
       >
-        <div className="relative h-full w-full overflow-hidden rounded-[42%_58%_63%_37%/38%_44%_56%_62%]">
+        <div className="relative z-10 h-full w-full overflow-hidden rounded-[42%_58%_63%_37%/38%_44%_56%_62%]">
           <div className="absolute inset-0 z-10 bg-green/20 opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
           <Image
             src="/assets/about/profile-img.png"
@@ -120,7 +120,8 @@ export function StickyProfileImage({
             quality={90}
           />
         </div>
-        <div className="absolute inset-0 -z-10 hidden h-64 rounded-[68%_32%_45%_55%/54%_42%_58%_46%] bg-green rotate-6 translate-x-4 translate-y-4 md:block" />
+        <div className="absolute z-0 hidden size-36 rounded-[62%_38%_48%_52%/54%_44%_56%_46%] bg-pink/80 -rotate-12 translate-x-5 translate-y-4 md:block" />
+        <div className="absolute z-0 hidden size-72 rounded-[38%_62%_54%_46%/46%_58%_42%_54%] bg-green rotate-6 translate-x-3 translate-y-4 md:block" />
       </motion.div>
     </motion.div>
   );

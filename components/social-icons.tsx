@@ -12,17 +12,17 @@ export function SocialIcons({ orientation = "horizontal" }: SocialIconsProps) {
     {
       name: "LinkedIn",
       icon: <Linkedin size={20} />,
-      url: "https://www.linkedin.com/in/bhargava-kiran/",
+      url: "https://linkedin.com/in/umg25011",
     },
     {
       name: "GitHub",
       icon: <Github size={20} />,
-      url: "https://github.com/ab-kiran-18",
+      url: "https://github.com/sri-nanditha-25",
     },
     {
       name: "Instagram",
       icon: <Instagram size={20} />,
-      url: "https://www.instagram.com/bhargava_kiran/",
+      url: "https://instagram.com/nandu_talks25",
     },
   ]
 

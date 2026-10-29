@@ -23,7 +23,19 @@ export function ProfileSlot({
       ref={slotRef}
       className={`${PROFILE_SLOT_CLASS} ${className}`}
       aria-hidden
-    />
+    >
+      <div className="absolute inset-0 overflow-hidden rounded-[42%_58%_63%_37%/38%_44%_56%_62%] md:hidden">
+        <Image
+          src="/assets/about/profile-img.png"
+          alt="B Sri Nanditha profile"
+          fill
+          sizes="(max-width: 640px) 192px, 240px"
+          className="object-cover"
+          priority
+          quality={90}
+        />
+      </div>
+    </div>
   );
 }
 

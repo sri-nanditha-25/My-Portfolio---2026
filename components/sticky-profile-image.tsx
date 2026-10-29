@@ -14,34 +14,16 @@ export const PROFILE_SLOT_CLASS =
 export function ProfileSlot({
   slotRef,
   className = "",
-  showMobileImage = true,
 }: {
   slotRef: RefObject<HTMLDivElement | null>;
   className?: string;
-  showMobileImage?: boolean;
 }) {
   return (
     <div
       ref={slotRef}
       className={`${PROFILE_SLOT_CLASS} ${className}`}
       aria-hidden
-    >
-      <motion.div
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ delay: 0.45, duration: 0.5 }}
-        className={`relative h-full w-full overflow-hidden rounded-[42%_58%_63%_37%/38%_44%_56%_62%] md:hidden ${showMobileImage === false ? "hidden" : ""}`}
-      >
-        <Image
-          src="/assets/about/profile-img.png"
-          alt=""
-          fill
-          sizes="192px"
-          className="object-cover"
-          quality={90}
-        />
-      </motion.div>
-    </div>
+    />
   );
 }
 
@@ -99,16 +81,11 @@ export function StickyProfileImage({
 
   return (
     <motion.div
-      className="pointer-events-none fixed left-0 top-0 z-30 hidden will-change-transform md:block"
+      className={`pointer-events-none fixed left-0 top-0 z-30 will-change-transform`}
       style={{ x, y, width, height, opacity }}
     >
-      <motion.div
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ delay: 0.45, duration: 0.5 }}
-        className="group relative h-full w-full pointer-events-auto"
-      >
-        <div className="relative z-10 h-full w-full overflow-hidden rounded-[42%_58%_63%_37%/38%_44%_56%_62%]">
+      <div className="group relative h-full w-full pointer-events-auto">
+        <div className="relative h-full w-full overflow-hidden rounded-[42%_58%_63%_37%/38%_44%_56%_62%]">
           <div className="absolute inset-0 z-10 bg-green/20 opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
           <Image
             src="/assets/about/profile-img.png"
@@ -120,11 +97,8 @@ export function StickyProfileImage({
             quality={90}
           />
         </div>
-        <div
-          aria-hidden="true"
-          className="pointer-events-none absolute inset-0 z-0 hidden translate-x-4 -translate-y-4 border-2 border-green md:block"
-        />
-      </motion.div>
+        <div className="absolute inset-0 -z-10 hidden rounded-[42%_58%_63%_37%/38%_44%_56%_62%] border-2 border-green translate-x-4 translate-y-4 md:block md:h-64" />
+      </div>
     </motion.div>
   );
 }

@@ -81,7 +81,7 @@ export function About({
           animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
           transition={{ duration: 0.5, delay: 0.4 }}
         >
-          <ProfileSlot slotRef={endRef} className="mx-auto" showMobileImage={false} />
+          <ProfileSlot slotRef={endRef} className="mx-auto" />
         </motion.div>
       </div>
     </section>

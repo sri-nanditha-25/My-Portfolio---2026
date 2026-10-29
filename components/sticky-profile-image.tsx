@@ -122,7 +122,7 @@ export function StickyProfileImage({
         </div>
         <svg
           aria-hidden="true"
-          className="pointer-events-none absolute -inset-8 z-0 hidden h-[calc(100%+4rem)] w-[calc(100%+4rem)] scale-[1.8] fill-pink md:block"
+          className="pointer-events-none absolute -inset-8 z-0 hidden h-[calc(100%+4rem)] w-[calc(100%+4rem)] translate-x-8 scale-[1.8] fill-pink md:block"
           viewBox="0 0 200 200"
           xmlns="http://www.w3.org/2000/svg"
         >

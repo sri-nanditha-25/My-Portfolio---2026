@@ -120,7 +120,7 @@ export function StickyProfileImage({
             quality={90}
           />
         </div>
-        <div className="absolute inset-0 -z-10 hidden rounded-xl border-2 border-green translate-x-4 translate-y-4 md:block md:h-64" />
+        <div className="absolute inset-0 -z-10 hidden h-64 rounded-[42%_58%_63%_37%/38%_44%_56%_62%] bg-green translate-x-4 translate-y-4 md:block" />
       </motion.div>
     </motion.div>
   );

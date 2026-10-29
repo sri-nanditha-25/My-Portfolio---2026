@@ -139,7 +139,39 @@ export function Experience() {
         <span className="mr-2 font-mono text-green">02. Experience</span> 
       </motion.h2>
 
-      <div className="flex flex-col md:flex-row gap-6 sm:gap-8 max-w-4xl mx-auto">
+      <div className="md:hidden flex flex-col gap-12 max-w-4xl mx-auto">
+        {jobs.map((job, i) => (
+          <motion.article
+            key={job.company}
+            initial={{ opacity: 0, y: 20 }}
+            animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
+            transition={{ duration: 0.4, delay: 0.15 + i * 0.1 }}
+            className="space-y-4"
+          >
+            <h3 className="text-lg font-medium text-lightest-slate">
+              {job.title} <span className="text-green">@ {job.company}</span>
+            </h3>
+            <p className="font-mono text-xs text-light-slate">{job.range}</p>
+            <ul className="space-y-3">
+              {job.duties.map((duty, j) => (
+                <li key={j} className="flex items-start">
+                  <ChevronRight size={18} className="text-green shrink-0 mt-1 mr-2" />
+                  <span className="text-light-slate text-sm">{duty}</span>
+                </li>
+              ))}
+            </ul>
+            <div className="flex flex-wrap gap-2 pt-2">
+              {job.tech.map((tech) => (
+                <span key={tech} className="px-2 py-1 rounded-full bg-light-navy text-green text-xs font-mono border border-green/20 shadow-sm">
+                  {tech}
+                </span>
+              ))}
+            </div>
+          </motion.article>
+        ))}
+      </div>
+
+      <div className="hidden md:flex flex-col md:flex-row gap-6 sm:gap-8 max-w-4xl mx-auto">
         <motion.div
           className="relative mb-6 md:mb-0 md:w-max"
           initial={{ opacity: 0, y: 20 }}

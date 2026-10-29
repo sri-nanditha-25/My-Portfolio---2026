@@ -6,8 +6,6 @@ import { useState, useRef, useEffect } from "react";
 import { motion, useInView, AnimatePresence } from "framer-motion";
 import { ExternalLink, ChevronRight } from "lucide-react";
 import Link from "next/link";
-import { useMobile } from "@/hooks/use-mobile";
-
 const jobs = [
   {
     company: "Tata Steel Foundation",
@@ -102,7 +100,6 @@ export function Experience() {
   const tabsRef = useRef<(HTMLButtonElement | null)[]>([]);
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-100px" });
-  const isMobile = useMobile();
 
   useEffect(() => {
     if (tabFocus !== null) {
@@ -142,9 +139,41 @@ export function Experience() {
         <span className="mr-2 font-mono text-green">02. Experience</span> 
       </motion.h2>
 
-      <div className="flex flex-col md:flex-row gap-6 sm:gap-8 max-w-4xl mx-auto">
+      <div className="md:hidden flex flex-col gap-12 max-w-4xl mx-auto">
+        {jobs.map((job, i) => (
+          <motion.article
+            key={job.company}
+            initial={{ opacity: 0, y: 20 }}
+            animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
+            transition={{ duration: 0.4, delay: 0.15 + i * 0.1 }}
+            className="space-y-4"
+          >
+            <h3 className="text-lg font-medium text-lightest-slate">
+              {job.title} <span className="text-green">@ {job.company}</span>
+            </h3>
+            <p className="font-mono text-xs text-light-slate">{job.range}</p>
+            <ul className="space-y-3">
+              {job.duties.map((duty, j) => (
+                <li key={j} className="flex items-start">
+                  <ChevronRight size={18} className="text-green shrink-0 mt-1 mr-2" />
+                  <span className="text-light-slate text-sm">{duty}</span>
+                </li>
+              ))}
+            </ul>
+            <div className="flex flex-wrap gap-2 pt-2">
+              {job.tech.map((tech) => (
+                <span key={tech} className="px-2 py-1 rounded-full bg-light-navy text-green text-xs font-mono border border-green/20 shadow-sm">
+                  {tech}
+                </span>
+              ))}
+            </div>
+          </motion.article>
+        ))}
+      </div>
+
+      <div className="hidden md:flex flex-col md:flex-row gap-6 sm:gap-8 max-w-4xl mx-auto">
         <motion.div
-          className="relative flex overflow-x-auto md:block md:overflow-visible mb-6 md:mb-0 md:w-max"
+          className="relative mb-6 md:mb-0 md:w-max"
           initial={{ opacity: 0, y: 20 }}
           animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
           transition={{ duration: 0.5, delay: 0.2 }}
@@ -152,7 +181,7 @@ export function Experience() {
           aria-label="Job tabs"
           onKeyDown={onKeyDown}
         >
-          <div className="flex md:flex-col min-w-full w-max">
+          <div className="flex flex-col min-w-full w-full">
             {jobs?.map((job, i) => (
               <button
                 key={i}
@@ -161,7 +190,7 @@ export function Experience() {
                     tabsRef.current[i] = el;
                   }
                 }}
-                className={`px-4 sm:px-5 py-2 sm:py-3 font-mono text-xs sm:text-sm whitespace-nowrap focus-ring rounded transition-all duration-300 ${
+                className={`w-full text-left px-4 sm:px-5 py-2 sm:py-3 font-mono text-xs sm:text-sm whitespace-nowrap focus-ring rounded transition-all duration-300 ${
                   activeTabId === i
                     ? "text-green bg-light-navy/50 relative"
                     : "text-slate hover:text-green hover:bg-light-navy/30"
@@ -177,11 +206,7 @@ export function Experience() {
                 {job.company}
                 {activeTabId === i && (
                   <motion.span
-                    className={`absolute ${
-                      isMobile
-                        ? "bottom-0 left-0 right-0 h-0.5"
-                        : "left-0 top-0 bottom-0 w-0.5"
-                    } bg-green rounded-full`}
+                    className="absolute left-0 top-0 bottom-0 w-0.5 bg-green rounded-full"
                     layoutId="activeTab"
                     transition={{ type: "spring", stiffness: 300, damping: 30 }}
                   />

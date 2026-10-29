@@ -17,6 +17,7 @@ export function ProfileSlot({
 }: {
   slotRef: RefObject<HTMLDivElement | null>;
   className?: string;
+  showMobileImage?: boolean;
 }) {
   return (
     <div
@@ -24,7 +25,7 @@ export function ProfileSlot({
       className={`${PROFILE_SLOT_CLASS} ${className}`}
       aria-hidden
     >
-      <div className="relative h-full w-full overflow-hidden rounded-xl md:hidden">
+      <div className={`relative h-full w-full overflow-hidden rounded-xl md:hidden ${showMobileImage === false ? "hidden" : ""}`}>
         <Image
           src="/assets/about/profile-img.png"
           alt=""

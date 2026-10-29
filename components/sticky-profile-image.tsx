@@ -14,6 +14,7 @@ export const PROFILE_SLOT_CLASS =
 export function ProfileSlot({
   slotRef,
   className = "",
+  showMobileImage = true,
 }: {
   slotRef: RefObject<HTMLDivElement | null>;
   className?: string;

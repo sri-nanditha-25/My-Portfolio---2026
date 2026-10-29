@@ -24,7 +24,12 @@ export function ProfileSlot({
       className={`${PROFILE_SLOT_CLASS} ${className}`}
       aria-hidden
     >
-      <div className="absolute inset-0 overflow-hidden rounded-[42%_58%_63%_37%/38%_44%_56%_62%] md:hidden">
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5, delay: 0.3 }}
+        className="absolute inset-0 overflow-hidden rounded-[42%_58%_63%_37%/38%_44%_56%_62%] md:hidden"
+      >
         <Image
           src="/assets/about/profile-img.png"
           alt="B Sri Nanditha profile"
@@ -34,7 +39,7 @@ export function ProfileSlot({
           priority
           quality={90}
         />
-      </div>
+      </motion.div>
     </div>
   );
 }
@@ -96,7 +101,12 @@ export function StickyProfileImage({
       className={`pointer-events-none fixed left-0 top-0 z-30 will-change-transform`}
       style={{ x, y, width, height, opacity }}
     >
-      <div className="group relative h-full w-full pointer-events-auto">
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5, delay: 0.3 }}
+        className="group relative h-full w-full pointer-events-auto"
+      >
         <div className="relative h-full w-full overflow-hidden rounded-[42%_58%_63%_37%/38%_44%_56%_62%]">
           <div className="absolute inset-0 z-10 bg-green/20 opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
           <Image
@@ -110,7 +120,7 @@ export function StickyProfileImage({
           />
         </div>
         <div className="absolute inset-0 -z-10 hidden rounded-[42%_58%_63%_37%/38%_44%_56%_62%] border-2 border-green translate-x-4 translate-y-4 md:block md:h-64" />
-      </div>
+      </motion.div>
     </motion.div>
   );
 }

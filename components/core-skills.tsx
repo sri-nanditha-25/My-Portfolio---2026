@@ -51,30 +51,13 @@ export function CoreSkills() {
   return (
     <section id="core-skills" ref={ref} className="py-16 sm:py-24">
       <motion.h2
-        className="numbered-heading mb-4 text-xl font-bold sm:text-2xl"
+        className="numbered-heading mb-10 text-xl font-bold sm:mb-16 sm:text-2xl"
         initial={{ opacity: 0, y: 20 }}
         animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
         transition={{ duration: 0.5 }}
       >
-        <span className="mr-2 font-mono text-green">03.</span> Core Competencies
+        <span className="mr-2 font-mono text-green">02. Core Competencies</span>
       </motion.h2>
-
-      <motion.h3
-        className="mb-3 text-3xl font-semibold sm:text-4xl"
-        initial={{ opacity: 0, y: 16 }}
-        animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 16 }}
-        transition={{ duration: 0.5, delay: 0.08 }}
-      >
-        What I Bring to the Table.
-      </motion.h3>
-      <motion.p
-        className="mb-10 max-w-2xl text-sm leading-relaxed text-slate sm:mb-12 sm:text-base"
-        initial={{ opacity: 0, y: 16 }}
-        animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 16 }}
-        transition={{ duration: 0.5, delay: 0.16 }}
-      >
-        A blend of management capabilities, analytical thinking and collaborative skills that shape my professional approach.
-      </motion.p>
 
       <div className="grid grid-cols-1 gap-x-10 gap-y-8 sm:grid-cols-2 sm:gap-x-12 sm:gap-y-10">
         {skillGroups.map((group, index) => {
@@ -90,11 +73,11 @@ export function CoreSkills() {
             >
               <div className="mb-4 flex items-center gap-3">
                 <Icon aria-hidden="true" className="size-[18px] shrink-0 text-green" strokeWidth={1.7} />
-                <h4 className="text-base font-semibold text-lightest-slate sm:text-[17px]">
+                <h4 className="text-lg font-medium text-lightest-slate sm:text-xl">
                   {group.title}
                 </h4>
               </div>
-              <ul className="grid grid-cols-1 gap-x-5 gap-y-2 pl-[30px] text-sm text-slate sm:grid-cols-2">
+              <ul className="grid grid-cols-1 gap-x-5 gap-y-2 pl-[30px] text-sm text-light-slate sm:grid-cols-2 sm:text-base">
                 {group.skills.map((skill) => (
                   <li key={skill} className="leading-relaxed">
                     {skill}

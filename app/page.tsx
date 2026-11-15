@@ -18,8 +18,8 @@ export default function Home() {
       <SocialSidebar />
       <EmailSidebar />
       <HeroAbout>
-        <Experience />
         <CoreSkills />
+        <Experience />
         {/* <Projects /> */}
       </HeroAbout>
       <Footer />

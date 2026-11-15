@@ -136,7 +136,7 @@ export function Experience() {
         animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
         transition={{ duration: 0.5 }}
       >
-        <span className="mr-2 font-mono text-green">02. Experience</span> 
+        <span className="mr-2 font-mono text-green">03. Experience</span> 
       </motion.h2>
 
       <div className="md:hidden flex flex-col gap-12 max-w-4xl mx-auto">

@@ -63,12 +63,12 @@ export function Education() {
                   {item.status}
                 </span>
               )}
-              <h4 className="text-base font-semibold leading-snug text-darkest-slate sm:text-lg">
+              <h4 className="text-lg font-medium leading-snug text-lightest-slate sm:text-xl">
                 {item.degree}
               </h4>
-              <p className="text-base sm:text-lg">{item.focus}</p>
-              <p className="text-base sm:text-lg">{item.institution}</p>
-              <span className="text-base sm:text-lg">{item.date}</span>
+              <p className="text-sm text-light-slate sm:text-base">{item.focus}</p>
+              <p className="text-sm text-light-slate sm:text-base">{item.institution}</p>
+              <span className="font-mono text-xs text-light-slate sm:text-sm">{item.date}</span>
             </div>
           </motion.article>
         ))}

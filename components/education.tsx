@@ -10,12 +10,11 @@ const education = [
     degree: "Master of Business Administration (MBA)",
     focus: "Urban Management & Governance",
     institution: "XIM University, Bhubaneswar",
-    date: "Expected 2027",
+    date: "2027",
     image: "/assets/education/xim-campus.jpg",
     imageAlt: "XIM University campus in Bhubaneswar",
   },
   {
-    status: "Completed",
     degree: "Bachelor of Technology (B.Tech)",
     focus: "Electronics & Communication Engineering",
     institution: "Vignan's Institute of Engineering for Women",
@@ -40,20 +39,6 @@ export function Education() {
         <span className="mr-2 font-mono text-green">04.</span> Education
       </motion.h2>
 
-      <motion.div
-        className="mb-7 sm:mb-8"
-        initial={{ opacity: 0, y: 18 }}
-        animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 18 }}
-        transition={{ duration: 0.45, delay: 0.12 }}
-      >
-        <h3 className="text-2xl font-semibold text-darkest-slate sm:text-3xl">
-          Academic Journey.
-        </h3>
-        <p className="mt-2 max-w-2xl text-sm leading-relaxed text-slate sm:text-base">
-          Building a foundation in technology, management and organisational understanding.
-        </p>
-      </motion.div>
-
       <motion.div className="overflow-hidden rounded-xl border border-lightest-navy bg-light-navy/20 divide-y divide-lightest-navy/60">
         {education.map((item, index) => (
           <motion.article
@@ -72,18 +57,18 @@ export function Education() {
                 className="object-cover"
               />
             </div>
-            <div className="flex min-w-0 flex-1 flex-col gap-1.5 sm:gap-2">
+            <div className="flex min-w-0 flex-1 flex-col gap-1.5 text-slate sm:gap-2">
               {item.status === "Currently pursuing" && (
-                <span className="w-fit rounded-full border border-green/25 bg-green/10 px-2.5 py-1 font-mono text-[11px] uppercase tracking-wide text-green">
+                <span className="w-fit rounded-full border border-green/25 bg-green/10 px-2.5 py-1 font-sans text-xs uppercase tracking-wide text-green">
                   {item.status}
                 </span>
               )}
-              <h4 className="text-base font-medium leading-snug text-lightest-slate sm:text-xl">
+              <h4 className="text-base font-semibold leading-snug text-darkest-slate sm:text-lg">
                 {item.degree}
               </h4>
-              <p className="text-sm text-light-slate sm:text-lg">{item.focus}</p>
-              <p className="text-sm text-light-slate sm:text-lg">{item.institution}</p>
-              <span className="font-mono text-xs text-light-slate sm:text-sm">{item.date}</span>
+              <p className="text-base sm:text-lg">{item.focus}</p>
+              <p className="text-base sm:text-lg">{item.institution}</p>
+              <span className="text-base sm:text-lg">{item.date}</span>
             </div>
           </motion.article>
         ))}

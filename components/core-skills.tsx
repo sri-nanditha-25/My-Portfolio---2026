@@ -56,7 +56,7 @@ export function CoreSkills() {
         animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
         transition={{ duration: 0.5 }}
       >
-        <span className="mr-2 font-mono text-green">02. Core Competencies</span>
+        <span className="mr-2 font-mono text-green">02.</span> Core Competencies
       </motion.h2>
 
       <div className="grid grid-cols-1 gap-x-10 gap-y-8 sm:grid-cols-2 sm:gap-x-12 sm:gap-y-10">
@@ -66,7 +66,7 @@ export function CoreSkills() {
           return (
             <motion.article
               key={group.title}
-              className="border-t border-lightest-navy pt-5"
+              className="border-t border-lightest-navy pt-5 first:border-t-0 first:pt-0 sm:[&:nth-child(-n+2)]:border-t-0 sm:[&:nth-child(-n+2)]:pt-0"
               initial={{ opacity: 0, y: 18 }}
               animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 18 }}
               transition={{ duration: 0.45, delay: 0.2 + index * 0.08 }}
@@ -77,9 +77,10 @@ export function CoreSkills() {
                   {group.title}
                 </h4>
               </div>
-              <ul className="grid grid-cols-1 gap-x-5 gap-y-2 pl-[30px] text-sm text-light-slate sm:grid-cols-2 sm:text-base">
+              <ul className="grid grid-cols-1 gap-x-5 gap-y-2 text-slate sm:grid-cols-2">
                 {group.skills.map((skill) => (
-                  <li key={skill} className="leading-relaxed">
+                  <li key={skill} className="flex items-center font-mono text-xs sm:text-sm">
+                    <span aria-hidden="true" className="mr-2 text-green">▹</span>
                     {skill}
                   </li>
                 ))}

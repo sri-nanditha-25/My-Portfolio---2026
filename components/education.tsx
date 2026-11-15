@@ -54,44 +54,40 @@ export function Education() {
         </p>
       </motion.div>
 
-      <div className="grid gap-5 md:grid-cols-2 md:gap-6">
+      <motion.div className="overflow-hidden rounded-xl border border-lightest-navy bg-light-navy/20 divide-y divide-lightest-navy/60">
         {education.map((item, index) => (
           <motion.article
             key={item.degree}
-            className="overflow-hidden rounded-lg border border-lightest-navy bg-light-navy/30"
+            className="flex items-center gap-4 p-4 sm:gap-6 sm:p-5"
             initial={{ opacity: 0, y: 18 }}
             animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 18 }}
             transition={{ duration: 0.45, delay: 0.2 + index * 0.12 }}
           >
-            <div className="relative aspect-[16/7] overflow-hidden">
+            <div className="relative h-24 w-28 shrink-0 overflow-hidden rounded-2xl sm:h-32 sm:w-40 md:h-36 md:w-48">
               <Image
                 src={item.image}
                 alt={item.imageAlt}
                 fill
-                sizes="(max-width: 767px) 100vw, 50vw"
+                sizes="(max-width: 639px) 112px, (max-width: 767px) 160px, 192px"
                 className="object-cover"
               />
             </div>
-            <div className="flex flex-col gap-2.5 p-5 sm:p-6">
-              <span className="w-fit rounded-full border border-green/25 bg-green/10 px-2.5 py-1 font-mono text-[11px] uppercase tracking-wide text-green">
-                {item.status}
-              </span>
-              <div>
-                <h4 className="text-lg font-medium leading-snug text-lightest-slate sm:text-xl">
-                  {item.degree}
-                </h4>
-                <p className="mt-1 text-sm text-green sm:text-base">{item.focus}</p>
-              </div>
-              <div className="mt-1 flex items-end justify-between gap-3 border-t border-lightest-navy pt-3">
-                <p className="text-sm text-light-slate sm:text-base">{item.institution}</p>
-                <span className="shrink-0 font-mono text-xs text-light-slate sm:text-sm">
-                  {item.date}
+            <div className="flex min-w-0 flex-1 flex-col gap-1.5 sm:gap-2">
+              {item.status === "Currently pursuing" && (
+                <span className="w-fit rounded-full border border-green/25 bg-green/10 px-2.5 py-1 font-mono text-[11px] uppercase tracking-wide text-green">
+                  {item.status}
                 </span>
-              </div>
+              )}
+              <h4 className="text-base font-medium leading-snug text-lightest-slate sm:text-xl">
+                {item.degree}
+              </h4>
+              <p className="text-sm text-light-slate sm:text-lg">{item.focus}</p>
+              <p className="text-sm text-light-slate sm:text-lg">{item.institution}</p>
+              <span className="font-mono text-xs text-light-slate sm:text-sm">{item.date}</span>
             </div>
           </motion.article>
         ))}
-      </div>
+      </motion.div>
     </section>
   );
 }

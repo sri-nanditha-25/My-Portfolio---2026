@@ -53,6 +53,7 @@ export function Education() {
                 src={item.image}
                 alt={item.imageAlt}
                 fill
+                priority
                 sizes="(max-width: 639px) 112px, (max-width: 767px) 160px, 192px"
                 className="object-cover"
               />

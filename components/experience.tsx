@@ -17,19 +17,17 @@ const jobs = [
     range: "Apr 2026 - Jun 2026",
   
     duties: [
-      "Supported the participant selection process for the Tribal Leadership Programme (TLP) under the SAMVAAD Ecosystem, working on leadership identification, assessment, shortlisting, and participant profiling.",
+      "Supported end-to-end participant selection for the Tribal Leadership Programme, contributing to talent identification, screening, assessment and shortlisting.",
   
-      "Reviewed and evaluated nearly 600 applications and contributed to shortlisting 138 participants based on leadership potential, community contribution, aspirations, social impact, and interview performance.",
+      "Evaluated 600+ applications and contributed to shortlisting 138 participants based on leadership competencies, community impact and programme suitability.",
   
-      "Conducted 100+ structured interviews with applicants from different states across India, assessing their leadership journeys, community work, achievements, aspirations, and social impact.",
+      "Conducted 100+ structured interviews with applicants across India, assessing leadership potential, stakeholder engagement, achievements and aspirations.",
   
-      "Applied the AIR evaluation framework and impact-based assessment approach to systematically evaluate applicants beyond academic or professional achievements.",
+      "Applied the AIR evaluation framework and impact-based assessment methods to support structured, competency-driven selection decisions.",
   
-      "Managed and validated 600+ participant records using Microsoft Excel, including interview schedules, evaluation status, regional categorisation, shortlisting updates, and summary reporting.",
+      "Managed 600+ candidate records using Microsoft Excel, maintaining evaluation trackers, interview schedules, regional data and selection reports.",
   
-      "Prepared detailed profiles for shortlisted participants covering their background, achievements, leadership journey, and community contribution, along with presentation decks for programme review sessions.",
-  
-      "Supported programme documentation, reporting, coordination, and cross-team communication while working within the wider SAMVAAD social-impact ecosystem."
+      "Developed shortlisted participant profiles and presentation decks, supporting programme reviews, documentation and cross-functional coordination."
     ],
   
     tech: [
@@ -59,19 +57,17 @@ const jobs = [
     range: "Nov 2025 - Jan 2026",
   
     duties: [
-      "Participated in an Urban Management Municipal Immersion focused on understanding the functioning of urban governance, municipal administration, infrastructure, and public-service delivery in Raipur.",
+      "Undertook a municipal immersion to understand urban governance, public administration, infrastructure planning and municipal service delivery.",
   
-      "Conducted field observations and interacted with municipal stakeholders to understand how essential civic services such as water supply, sanitation, solid waste management, sewage treatment, and urban infrastructure are planned and operated.",
+      "Conducted a primary survey of 104 college students, assessing civic-service awareness, sanitation concerns and public satisfaction to identify service-delivery gaps.",
   
-      "Contributed to a primary survey of 104 college students to assess awareness of municipal functions, satisfaction with civic services, sanitation concerns, and expectations from Raipur Municipal Corporation.",
+      "Examined municipal infrastructure and operations across water supply, sanitation, solid waste management and sewage treatment through field visits and stakeholder interactions.",
   
-      "Studied solid waste management, sewage treatment, and water filtration and distribution systems through field visits, documenting operational processes, service-delivery challenges, and environmental considerations.",
+      "Studied NULM-supported Self-Help Groups and livelihood initiatives, examining government interventions, community participation and socio-economic outcomes.",
   
-      "Examined NULM-supported Self Help Groups and livelihood initiatives to understand how municipal and government support translates into community-level social and economic outcomes.",
+      "Analysed urban infrastructure, land use, demographics, connectivity and municipal service delivery to develop observations and recommendations for urban development.",
   
-      "Analysed urban development factors including demographics, land use, connectivity, infrastructure, municipal governance, and service-delivery challenges to develop practical observations and recommendations.",
-  
-      "Studied public transport infrastructure and operations through the Raipur ISBT visit, gaining exposure to terminal planning, passenger facilities, traffic management, and the role of transport infrastructure in urban development."
+      "Assessed public transport infrastructure through a visit to Raipur ISBT, examining terminal operations, passenger facilities and transport planning considerations."
     ],
   
     tech: [

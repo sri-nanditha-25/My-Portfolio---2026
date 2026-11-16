@@ -39,7 +39,7 @@ export function Education() {
         <span className="mr-2 font-mono text-green">04.</span> Education
       </motion.h2>
 
-      <motion.div className="overflow-hidden rounded-xl border border-lightest-navy bg-light-navy/20 divide-y divide-lightest-navy/60">
+      <motion.div className="divide-y divide-lightest-navy/60">
         {education.map((item, index) => (
           <motion.article
             key={item.degree}

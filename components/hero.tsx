@@ -77,43 +77,57 @@ export function Hero({
                   variants={itemVariants}
                   className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-bold text-lightest-slate"
                 >
-                  B Sri Nanditha
+                  B. Sri Nanditha
                 </motion.h1>
 
                 <motion.p
                   variants={itemVariants}
-                  className="max-w-xl text-slate text-base sm:text-lg"
+                  className="max-w-xl text-slate text-lg sm:text-xl"
                 >
-                  Urban Development | Governance | Social Impact | Research & Program Management.
+                  Bringing People, Ideas and Projects Together.
+                </motion.p>
+
+                <motion.p
+                  variants={itemVariants}
+                  className="max-w-xl text-slate text-sm sm:text-base"
+                >
+                  MBA Candidate | Project Coordination | Operations | Research & Strategy
                 </motion.p>
 
                 <motion.p
                   variants={itemVariants}
                   className="max-w-xl text-slate text-sm sm:text-lg"
                 >
-                  MBA candidate in Urban Management & Governance at {" "}
-                  <a
-                    href="https://www.xim.edu/"
-                    className="text-green hover:underline"
-                  >
-                    XIM University
-                  </a> {" "}
-                  with hands-on experience in CSR programs, municipal governance, field research, stakeholder engagement and data-driven program management
+                  {"I’m an MBA candidate at XIM University with an engineering background and experience supporting programme execution, stakeholder engagement, structured interviews, research and data-led reporting. I enjoy bringing structure to ideas, collaborating with people and helping teams turn plans into meaningful outcomes."}
                 </motion.p>
 
-                <motion.div variants={itemVariants} className="pt-4 sm:pt-6">
+
+                <motion.div variants={itemVariants} className="flex flex-wrap items-center gap-3 pt-4 sm:gap-4 sm:pt-6">
                   <Button
                     className="relative rounded-xl bg-green/95 text-navy shadow-[0_8px_20px_rgba(0,0,0,0.5),0_2px_6px_rgba(0,0,0,0.3),inset_0_-2px_4px_rgba(0,0,0,0.4),inset_0_2px_4px_rgba(255,255,255,0.15)] transition-all duration-300 hover:-translate-y-1 hover:scale-105 hover:bg-green after:absolute after:inset-[-4px] after:-z-10 after:rounded-[0.9rem] after:border after:border-green/50 after:opacity-70 after:animate-pulse"
                     asChild
                   >
-                    <a href="#about" className="group relative overflow-hidden">
+                    <a href="#experience" className="group relative overflow-hidden">
                       <span className="relative z-10 flex items-center gap-2 text-lg">
-                        Know about me
+                        Explore My Work
                         <span aria-hidden="true" className="transition-transform duration-300 group-hover:translate-x-1">
                           -&gt;
                         </span>
                       </span>
                       <span className="absolute inset-0 bg-green/20 translate-y-full transition-transform duration-300 group-hover:translate-y-0"></span>
+                    </a>
+                  </Button>
+                  <Button
+                    variant="outline"
+                    className="rounded-xl border-green/50 bg-transparent text-lightest-slate shadow-none hover:bg-green/10 hover:text-green"
+                    asChild
+                  >
+                    <a
+                      href="https://drive.google.com/file/d/1Sb3SaXqnWq9C1vfHDh8301OhhkqEudUi/view?usp=sharing"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      View Resume
                     </a>
                   </Button>
                 </motion.div>
